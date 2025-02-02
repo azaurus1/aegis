@@ -1,0 +1,33 @@
+{{- $environment := .Values.environment }}
+{{- $targetRevision := .Values.spec.source.targetRevision }}
+{{- range $index, $stack := .Values.stacks }}
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: haimoney-{{$stack.name}}-{{$environment}}-applicationset
+  namespace: argocd
+spec:
+  generators:
+    - git:
+        repoURL: https://github.com/azaurus1/haimoney-gitops
+        revision: HEAD
+        directories:
+          - path: '{{$environment}}/{{$stack.name}}/*'  # Use the environment and stack name to form the path
+  template:
+    metadata:
+      name: '{{$stack.name}}-{{`{{path.basename}}`}}-{{$environment}}'
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/azaurus1/haimoney-gitops
+        targetRevision: HEAD
+        path: '{{`{{path}}`}}'
+      destination:
+        name: in-cluster
+        namespace: '{{$stack.namespace}}'
+      syncPolicy:
+        syncOptions:
+        - CreateNamespace=true
+        - ApplyOutOfSyncOnly=true
+{{- end }}

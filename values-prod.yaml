@@ -1,0 +1,18 @@
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+  source:
+    repoURL: https://github.com/azaurus1/aegis
+    targetRevision: HEAD
+environment: prod
+stacks:
+  - name: apps
+    namespace: default
+  - name: access
+    namespace: default
+  - name: automation
+    namespace: default
+  - name: data
+    namespace: longhorn-system
+  - name: volumes
+    namespace: default

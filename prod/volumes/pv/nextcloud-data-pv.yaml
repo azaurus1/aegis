@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: nextcloud-data-pv
+spec:
+  capacity:
+    storage: 10Gi # This is a placeholder, the NFS share's size isn't enforced
+  accessModes:
+    - ReadWriteMany
+  nfs:
+    server: nasaurus
+    path: /volume1/NAS/nextcloud-data
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: nfs
