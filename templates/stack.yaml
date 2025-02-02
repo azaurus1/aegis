@@ -5,12 +5,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: haimoney-{{$stack.name}}-{{$environment}}-applicationset
+  name: aegis-{{$stack.name}}-{{$environment}}-applicationset
   namespace: argocd
 spec:
   generators:
     - git:
-        repoURL: https://github.com/azaurus1/haimoney-gitops
+        repoURL: https://github.com/azaurus1/aegis
         revision: HEAD
         directories:
           - path: '{{$environment}}/{{$stack.name}}/*'  # Use the environment and stack name to form the path
@@ -20,7 +20,7 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/azaurus1/haimoney-gitops
+        repoURL: https://github.com/azaurus1/aegis
         targetRevision: HEAD
         path: '{{`{{path}}`}}'
       destination:
