@@ -444,7 +444,7 @@ nextcloud:
   redis:
     enabled: true
     auth:
-      enabled: true
+      enabled: false
       password: "changeme"
       # name of an existing secret with Redis® credentials (instead of auth.password), must be created ahead of time
       existingSecret: ""
