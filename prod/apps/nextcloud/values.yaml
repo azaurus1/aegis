@@ -75,7 +75,7 @@ nextcloud:
     protocol: https
 
   nextcloud:
-    host: nextcloud.kube.home
+    host: aegis1
     username: admin
     password: changeme
     ## Use an existing secret
@@ -386,7 +386,7 @@ nextcloud:
     type: postgresql
 
     ## Database host. You can optionally include a colon delimited port like "myhost:1234"
-    host: ""
+    host: apps-nextcloud-prod-postgresql
 
     ## Database user
     user: nextcloud
