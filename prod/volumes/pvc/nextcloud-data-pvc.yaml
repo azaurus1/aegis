@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: nextcloud-data-pvc
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 200Gi # This must match or be less than the PV's capacity
+  storageClassName: nfs
+  volumeName: nextcloud-data-pv # Explicitly bind to the PV you created

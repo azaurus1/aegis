@@ -4,7 +4,7 @@ metadata:
   name: nextcloud-data-pv
 spec:
   capacity:
-    storage: 10Gi # This is a placeholder, the NFS share's size isn't enforced
+    storage: 200Gi # This is a placeholder, the NFS share's size isn't enforced
   accessModes:
     - ReadWriteMany
   nfs:
