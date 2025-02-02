@@ -694,7 +694,7 @@ nextcloud:
       enabled: true
       failureThreshold: 3
       successThreshold: 1
-      periodSeconds: 10
+      periodSeconds: 1200
       timeoutSeconds: 1
     livenessProbe:
       enabled: true
