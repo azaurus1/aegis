@@ -564,12 +564,12 @@ nextcloud:
     ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
     ##   GKE, AWS & OpenStack)
     ##
-    # storageClass: "-"
+    storageClass: "longhorn"
 
     ## A manually managed Persistent Volume and Claim
     ## Requires persistence.enabled: true
     ## If defined, PVC must be created manually before volume will be bound
-    existingClaim: nextcloud-data-pvc
+    # existingClaim: nextcloud-data-pvc
 
     accessMode: ReadWriteOnce
     size: 8Gi
@@ -611,7 +611,7 @@ nextcloud:
   readinessProbe:
     enabled: true
     initialDelaySeconds: 10
-    periodSeconds: 1200
+    periodSeconds: 10
     timeoutSeconds: 5
     failureThreshold: 3
     successThreshold: 1
