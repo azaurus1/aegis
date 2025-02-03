@@ -198,7 +198,7 @@ nextcloud:
       # Used for auto configure database
       autoconfig.php: true
       # Redis default configuration
-      redis.config.php: false
+      redis.config.php: true
       # Reverse proxy default configuration
       reverse-proxy.config.php: true
       # S3 Object Storage as primary storage
@@ -442,9 +442,9 @@ nextcloud:
   ##
 
   redis:
-    enabled: false
+    enabled: true
     auth:
-      enabled: false
+      enabled: true
       password: "changeme"
       # name of an existing secret with Redis® credentials (instead of auth.password), must be created ahead of time
       existingSecret: ""
