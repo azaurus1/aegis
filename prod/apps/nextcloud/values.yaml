@@ -97,6 +97,7 @@ nextcloud:
     # if set, we'll template this list to the NEXTCLOUD_TRUSTED_DOMAINS env var
     trustedDomains:
       - "nextcloud.azaurus.dev"
+      - "azaurus.dev"
     ## SMTP configuration
     mail:
       enabled: false
