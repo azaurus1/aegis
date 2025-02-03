@@ -383,7 +383,7 @@ nextcloud:
     enabled: true
 
     ## Supported database engines: mysql or postgresql
-    type: postgresql
+    type: mysql
 
     ## Database host. You can optionally include a colon delimited port like "myhost:1234"
     host: apps-nextcloud-prod-mariadb
