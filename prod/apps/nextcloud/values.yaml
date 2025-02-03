@@ -75,7 +75,7 @@ nextcloud:
     protocol: https
 
   nextcloud:
-    host: aegis1
+    host: nextcloud.azaurus.dev
     username: admin
     password: changeme
     ## Use an existing secret
