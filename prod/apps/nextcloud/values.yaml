@@ -373,14 +373,14 @@ nextcloud:
     #    value: ENV_VALUE
 
   internalDatabase:
-    enabled: false
+    enabled: true
     name: nextcloud
 
   ##
   ## External database configuration
   ##
   externalDatabase:
-    enabled: true
+    enabled: false
 
     ## Supported database engines: mysql or postgresql
     type: postgresql
