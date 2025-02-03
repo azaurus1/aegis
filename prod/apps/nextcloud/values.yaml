@@ -115,7 +115,7 @@ nextcloud:
     objectStore:
       # https://docs.nextcloud.com/server/latest/admin_manual/configuration_files/primary_storage.html#simple-storage-service-s3
       s3:
-        enabled: true
+        enabled: false
         # ignored if nextcloud.objectstore.s3.existingSecret is not empty string
         accessKey: ""
         # ignored if nextcloud.objectstore.s3.existingSecret is not empty string
