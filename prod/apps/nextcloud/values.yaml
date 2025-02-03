@@ -135,7 +135,7 @@ nextcloud:
         # object prefix in bucket
         prefix: ""
         # set to true if you are not using DNS for your buckets.
-        usePathStyle: false
+        usePathStyle: true
         # autocreate the bucket
         autoCreate: false
         # optonal parameter: you probably want to keep this as default
