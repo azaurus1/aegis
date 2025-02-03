@@ -373,20 +373,20 @@ nextcloud:
     #    value: ENV_VALUE
 
   internalDatabase:
-    enabled: true
+    enabled: false
     name: nextcloud
 
   ##
   ## External database configuration
   ##
   externalDatabase:
-    enabled: false
+    enabled: true
 
     ## Supported database engines: mysql or postgresql
     type: postgresql
 
     ## Database host. You can optionally include a colon delimited port like "myhost:1234"
-    host: apps-nextcloud-prod-postgresql
+    host: apps-nextcloud-prod-mariadb
 
     ## Database user
     user: nextcloud
@@ -405,6 +405,43 @@ nextcloud:
       passwordKey: db-password
       # hostKey: db-hostname-or-ip
       # databaseKey: db-name
+
+  ##
+  ## MariaDB chart configuration
+  ## ref: https://github.com/bitnami/charts/tree/main/bitnami/mariadb
+  ##
+  mariadb:
+    ## Whether to deploy a mariadb server from the bitnami mariab db helm chart
+    # to satisfy the applications database requirements. if you want to deploy this bitnami mariadb, set this and externalDatabase to true
+    # To use an ALREADY DEPLOYED mariadb database, set this to false and configure the externalDatabase parameters
+    enabled: true
+
+    # see: https://github.com/bitnami/charts/tree/main/bitnami/mariadb#global-parameters
+    global:
+      # overwrites the primary.persistence.storageClass value
+      defaultStorageClass: ""
+
+    auth:
+      database: nextcloud
+      username: nextcloud
+      password: changeme
+      # Use existing secret (auth.rootPassword, auth.password, and auth.replicationPassword will be ignored).
+      # secret must contain the keys mariadb-root-password, mariadb-replication-password and mariadb-password
+      existingSecret: ""
+
+    architecture: standalone
+
+    ## Enable persistence using Persistent Volume Claims
+    ## ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
+    ##
+    primary:
+      persistence:
+        enabled: false
+        # Use an existing Persistent Volume Claim (must be created ahead of time)
+        existingClaim: ""
+        storageClass: ""
+        accessMode: ReadWriteOnce
+        size: 8Gi
 
   ##
   ## PostgreSQL chart configuration
