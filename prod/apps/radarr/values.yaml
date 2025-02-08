@@ -9,7 +9,7 @@ radarr:
     additionalVolumes: 
       - name: movies
         persistentVolumeClaim:
-          claimName: movies-pvc
+          claimName: movie-pvc
       - name: downloads
         persistentVolumeClaim:
           claimName: downloads-pvc
