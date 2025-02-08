@@ -4,4 +4,4 @@ version: 1.0.0
 dependencies:
   - name: jellyseerr
     version: 0.2.4
-    repository: https://bubylou.github.io/Arr-Stack/arr-stack/
+    repository: https://bubylou.github.io/arr-stack/
