@@ -1,0 +1,22 @@
+radarr:
+  persistence:
+    storageClass: ""
+    existingClaim: ""
+    enabled: true
+    accessMode: ReadWriteOnce
+    size: 800Mi
+    # -- if you need any additional volumes, you can define them here
+    additionalVolumes: 
+      - name: movies
+        persistentVolumeClaim:
+          claimName: movies-pvc
+      - name: downloads
+        persistentVolumeClaim:
+          claimName: downloads-pvc
+    # -- if you need any additional volume mounts, you can define them here
+    additionalMounts: 
+      - name: movies
+        mountPath: /movies
+      - name: downloads
+        mountPath: /downloads
+
