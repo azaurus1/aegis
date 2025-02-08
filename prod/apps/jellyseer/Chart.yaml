@@ -2,6 +2,6 @@ apiVersion: v2
 name: jellyseer
 version: 1.0.0
 dependencies:
-  - name: jellyseerr
+  - name: jellyseer
     version: 0.2.4
     repository: https://bubylou.github.io/arr-stack
