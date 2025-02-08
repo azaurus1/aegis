@@ -1,5 +1,8 @@
 qbittorrent:
   persistence:
+    config:
+      enabled: true
+      storageClass: "longhorn"
     downloads:
       enabled: true
       mountPath: /downloads
