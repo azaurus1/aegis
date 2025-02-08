@@ -4,4 +4,4 @@ qbittorrent:
       enabled: true
       mountPath: /downloads
       type: pvc
-      existingClaim: downloads
+      existingClaim: downloads-pvc
