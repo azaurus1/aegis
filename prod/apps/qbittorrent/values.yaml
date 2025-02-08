@@ -3,6 +3,7 @@ qbittorrent:
     config:
       enabled: true
       storageClass: "longhorn"
+      size: 500Mi
     downloads:
       enabled: true
       mountPath: /downloads
