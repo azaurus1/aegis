@@ -1,0 +1,7 @@
+apiVersion: v2
+name: qbittorrent
+version: 1.0.0
+dependencies:
+  - name: qbittorrent
+    version: 0.4.0
+    repository: https://charts.gabe565.com
