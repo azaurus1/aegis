@@ -2,6 +2,7 @@ nzbget:
   persistence:
     config:
       enabled: true
+      size: 500Mi
     downloads:
         enabled: true
         mountPath: /downloads
