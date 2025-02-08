@@ -10,8 +10,14 @@ sonarr:
       - name: shows
         persistentVolumeClaim:
           claimName: shows-pvc
+      - name: downloads
+        persistentVolumeClaim:
+          claimName: downloads-pvc
     # -- if you need any additional volume mounts, you can define them here
     additionalMounts: 
       - name: shows
         mountPath: /shows
+      - name: downloads
+        mountPath: /downloads
+
 
