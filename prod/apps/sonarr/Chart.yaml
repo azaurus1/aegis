@@ -3,5 +3,5 @@ name: sonarr
 version: 1.0.0
 dependencies:
   - name: sonarr
-    version: 4.0.12
-    repository: https://loeken.github.io/helm-charts/
+    version: 1.7.0
+    repository: https://charts.alekc.dev
