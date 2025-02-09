@@ -16,3 +16,5 @@ stacks:
     namespace: longhorn-system
   - name: volumes
     namespace: default
+  - name: monitoring
+    namespace: default
