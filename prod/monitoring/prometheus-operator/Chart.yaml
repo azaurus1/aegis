@@ -1,0 +1,7 @@
+apiVersion: v2
+name: prometheus-operator
+version: 1.0.0
+dependencies:
+  - name: prometheus-operator
+    version: 13.0.1
+    repository: https://arldka.github.io/helm-charts
