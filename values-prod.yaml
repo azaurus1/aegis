@@ -18,3 +18,5 @@ stacks:
     namespace: default
   - name: monitoring
     namespace: default
+  - name: infrastructure
+    namespace: default
