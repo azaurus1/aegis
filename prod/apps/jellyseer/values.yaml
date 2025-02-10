@@ -1,0 +1,8 @@
+jellyseer:
+  volumes:
+    - name: jellyseerr-config
+      persistentVolumeClaim:
+        claimName: jellyseerr-pvc
+  volumeMounts:
+    - name: jellyseerr-config
+      mountPath: "/config"
