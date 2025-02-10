@@ -1,4 +1,4 @@
-jellyseer:
+jellyseerr:
   volumes:
     - name: jellyseerr-config
       persistentVolumeClaim:
