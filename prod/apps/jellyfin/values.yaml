@@ -2,7 +2,7 @@ jellyfin:
   persistence:
     config:
       enabled: true
-      size: 500Mi
+      size: 2Gi
     movies:
         enabled: true
         mountPath: /movies
