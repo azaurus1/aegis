@@ -1,0 +1,7 @@
+apiVersion: v2
+name: jellyfin
+version: 1.0.0
+dependencies:
+  - name: jellyfin
+    version: 10.10.6
+    repository: https://loeken.github.io/helm-charts
