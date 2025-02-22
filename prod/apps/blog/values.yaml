@@ -1,0 +1,21 @@
+ghost:
+  ghostUsername: azaurus
+  ghostEmail: liamaikin@gmail.com
+  service:
+    type: ClusterIP
+  ghostHost: "blog.azaurus.dev"
+  ghostEnableHttps: true
+  persistence:
+    enabled: true
+  mysql:
+    enabled: true
+    architecture: standalone
+    auth:
+      rootPassword: ""
+      database: bitnami_ghost
+      username: bn_ghost
+      password: ""
+      existingSecret: ""
+    primary:
+      persistence:
+        enabled: true
