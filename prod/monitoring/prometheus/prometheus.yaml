@@ -18,5 +18,3 @@ spec:
             storage: 10Gi
   enableAdminAPI: false
   retention: 10d
-  securityContext:
-    runAsNonRoot: true
