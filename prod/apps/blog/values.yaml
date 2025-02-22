@@ -7,6 +7,7 @@ ghost:
   ghostEnableHttps: true
   persistence:
     enabled: true
+    existingClaim: "blog-pvc"
   mysql:
     enabled: true
     architecture: standalone
