@@ -4,7 +4,7 @@ metadata:
   name: prometheus
 spec:
   replicas: 1
-  serviceAccountName: prometheus
+  serviceAccountName: monitoring-prometheus-oper
   serviceMonitorSelector: {} 
   resources:
     requests:
