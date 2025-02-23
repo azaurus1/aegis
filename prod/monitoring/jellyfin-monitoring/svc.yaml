@@ -6,6 +6,7 @@ spec:
   selector:
     app: prometheus-json-exporter
   ports:
-    - protocol: TCP
+    - name: metrics
+      protocol: TCP
       port: 7979
       targetPort: 7979

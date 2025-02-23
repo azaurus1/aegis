@@ -12,7 +12,7 @@ spec:
     matchNames:
       - default  
   endpoints:
-    - port: "7979"
+    - port: "metrics"
       interval: 30s
       scrapeTimeout: 10s
       path: /metrics 
