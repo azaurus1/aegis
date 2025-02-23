@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fritz-exporter
+  labels:
+    app: fritz-exporter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fritz-exporter
+  template:
+    metadata:
+      labels:
+        app: fritz-exporter
+    spec:
+      containers:
+        - name: fritz-exporter
+          image: pdreker/fritz_exporter:2
+          ports:
+            - containerPort: 9787
+          env:
+            - name: FRITZ_HOSTNAME
+              value: "fritz.box"
+            - name: FRITZ_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: fritz-exporter-secret
+                  key: FRITZ_USERNAME
+            - name: FRITZ_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: fritz-exporter-secret
+                  key: FRITZ_PASSWORD
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "100m"
+            requests:
+              memory: "64Mi"
+              cpu: "50m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: fritz-exporter
+spec:
+  selector:
+    app: fritz-exporter
+  ports:
+    - protocol: TCP
+      port: 9787
+      targetPort: 9787
+  type: ClusterIP
