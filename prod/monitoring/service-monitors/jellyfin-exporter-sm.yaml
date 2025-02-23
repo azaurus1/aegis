@@ -8,9 +8,6 @@ spec:
   selector:
     matchLabels:
       app.kubernetes.io/instance: monitoring-jellyfin-monitoring-prod
-  namespaceSelector:
-    matchNames:
-      - default  
   endpoints:
     - port: "metrics"
       interval: 30s
