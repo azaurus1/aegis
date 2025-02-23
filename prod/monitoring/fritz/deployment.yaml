@@ -48,7 +48,8 @@ spec:
   selector:
     app: fritz-exporter
   ports:
-    - protocol: TCP
+    - name: metrics
+      protocol: TCP
       port: 9787
       targetPort: 9787
   type: ClusterIP
