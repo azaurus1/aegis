@@ -1,0 +1,19 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: prometheus-json-exporter
+  labels:
+    release: prometheus
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: monitoring-jellyfin-monitoring-prod
+  namespaceSelector:
+    matchNames:
+      - default  
+  endpoints:
+    - port: "7979"
+      interval: 30s
+      scrapeTimeout: 10s
+      path: /metrics 
+      scheme: http
