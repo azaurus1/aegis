@@ -9,7 +9,7 @@ spec:
     matchLabels:
       app.kubernetes.io/instance: monitoring-fritz-prod
   endpoints:
-    - port: "9787"
+    - port: "metrics"
       path: /metrics
       interval: 30s
       scrapeTimeout: 10s
