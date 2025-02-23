@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prometheus-json-exporter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prometheus-json-exporter
+  template:
+    metadata:
+      labels:
+        app: prometheus-json-exporter
+    spec:
+      containers:
+        - name: json-exporter
+          image: quay.io/prometheuscommunity/json-exporter:latest
+          args:
+            - "--config.file=/etc/json-exporter/config.yaml"
+          env:
+            - name: API_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: json-exporter-secret
+                  key: api-token
+          volumeMounts:
+            - name: config-volume
+              mountPath: /etc/json-exporter
+      volumes:
+        - name: config-volume
+          configMap:
+            name: json-exporter-config
