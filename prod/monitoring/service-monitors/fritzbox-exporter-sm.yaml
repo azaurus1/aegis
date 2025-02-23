@@ -7,7 +7,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: fritz-exporter
+      app.kubernetes.io/instance: monitoring-fritz-prod
   endpoints:
     - port: "9787"
       path: /metrics
