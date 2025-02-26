@@ -22,7 +22,10 @@ cloudflared:
   replicaCount: 4
   affinity: {}
   tolerations: []
-  topologySpreadConstraints: []
+  topologySpreadConstraints:
+  - maxSkew: 1
+    topologyKey: "kubernetes.io/hostname"
+    whenUnsatisfiable: ScheduleAnyway
   resources: {}
   # resources:
   #   limits:
