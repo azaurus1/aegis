@@ -1,0 +1,7 @@
+apiVersion: v2
+name: gotify
+version: 1.0.0
+dependencies:
+  - name: gotify
+    version: 1.2.8
+    repository: https://rubxkube.github.io/charts/
