@@ -19,7 +19,7 @@ cloudflared:
   ## @param topologySpreadConstraints Control how pods are spread across your cluster among failure-domains such as regions, zones, nodes, and other user-defined topology domains.
   ## @param resources If specified, it sets the resource requests and limits for the pod.
   ##
-  replicaCount: 1
+  replicaCount: 4
   affinity: {}
   tolerations: []
   topologySpreadConstraints: []
