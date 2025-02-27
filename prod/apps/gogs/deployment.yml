@@ -18,8 +18,6 @@ spec:
       - name: gogs
         image: gogs/gogs:0.13.2
         ports:
-        - containerPort: 22
-          name: ssh
         - containerPort: 3000
           name: http
         env:
