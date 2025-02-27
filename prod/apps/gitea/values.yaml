@@ -274,7 +274,7 @@ gitea:
     create: true
     mount: true
     claimName: gitea-shared-storage
-    size: 10Gi
+    size: 5Gi
     accessModes:
       - ReadWriteOnce
     labels: {}
@@ -670,7 +670,7 @@ gitea:
       ports:
         postgresql: 5432
     persistence:
-      size: 10Gi
+      size: 2Gi
 
   ## @section PostgreSQL
   #
