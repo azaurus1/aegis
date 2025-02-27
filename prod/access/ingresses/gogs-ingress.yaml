@@ -16,4 +16,4 @@ spec:
           service:
             name: gogs-svc
             port:
-              number: 3000
+              number: 18080
