@@ -2,7 +2,7 @@ jellyfin:
   persistence:
     config:
       enabled: true
-      size: 2Gi
+      size: 8Gi
       accessMode: ReadWriteOnce
     movies:
         enabled: true
