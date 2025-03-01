@@ -7,10 +7,8 @@ jellyfin:
     movies:
         enabled: true
         mountPath: /movies
-        type: pvc
         existingClaim: movie-pvc
     shows:
         enabled: true
         mountPath: /shows
-        type: pvc
         existingClaim: shows-pvc
