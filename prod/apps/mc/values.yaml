@@ -19,7 +19,7 @@ minecraft:
   ##
   resources:
     requests:
-      memory: 512Mi
+      memory: 4Gi
       cpu: 500m
 
   lifecycle:
@@ -179,7 +179,7 @@ minecraft:
     ## Common types: "VANILLA", "FABRIC", "FORGE", "SPIGOT", "BUKKIT", "PAPER",
     ## "FTBA", "SPONGEVANILLA", "AUTO_CURSEFORGE"
     ## ref: https://docker-minecraft-server.readthedocs.io/en/latest/types-and-platforms
-    type: "VANILLA"
+    type: "AUTO_CURSEFORGE"
     # If type is set to FORGE, this sets the version; this is ignored if forgeInstallerUrl is set
     forgeVersion:
     # If type is set to FORGE, this sets the URL to download the Forge installer
@@ -327,16 +327,16 @@ minecraft:
       # CurseForge API key obtained from developer console
       apiKey:
         key: "CHANGEME!"
-        existingSecret: ""
+        existingSecret: "cf-secret"
         secretKey: cf-api-key
       # Link to modpack in general or a specific file
       # NOTE: In case of specific file - do not point at server file
-      pageUrl: ""
+      pageUrl: "https://www.curseforge.com/minecraft/modpacks/all-the-mods-10/files/6313628"
       # Unique id of modpack, can be used instead of url
-      slug: ""
+      slug: "all-the-mods-10"
       # Id used to specify which exact modpack file needs to be downloaded
       # NOTE: Do not use server file id
-      fileId: ""
+      fileId: "6313628"
       # Less restrictive way of specifying modpack version, uses substring match
       filenameMatcher: ""
       # List of project slugs or IDs to be excluded from modpack, useful if mod is incorrectly marked as server side
