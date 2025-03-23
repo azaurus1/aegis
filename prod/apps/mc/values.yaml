@@ -197,8 +197,8 @@ minecraft-java:
               # JVM_XX_OPTS: ""
               CF_API_KEY: ""
               CF_PAGE_URL: https://www.curseforge.com/minecraft/modpacks/all-the-mods-10/files/6313628
-              # CF_SLUG: all-the-mods-8
-              # CF_FILE_ID: "4248390"
+              CF_SLUG: all-the-mods-10
+              CF_FILE_ID: "6313628"
               # CF_FILENAME_MATCHER: 1.0.7
               # CF_EXCLUDE_MODS: |
               #   embeddium
