@@ -248,6 +248,7 @@ minecraft-java:
   persistence:
     data:
       enabled: true
+      size: 10Gi
       targetSelector:
         main:
           main:
@@ -258,6 +259,7 @@ minecraft-java:
             readOnly: true
     backups:
       enabled: true
+      size: 10Gi
       targetSelector:
         mcbackup:
           mcbackup:
