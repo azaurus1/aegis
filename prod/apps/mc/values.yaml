@@ -181,7 +181,7 @@ minecraft-java:
               # FTB_MODPACK_VERSION_ID: ""
               # CF_SERVER_MOD: ""
               # CF_BASE_DIR: ""
-              # USE_MODPACK_START_SCRIPT: true
+              USE_MODPACK_START_SCRIPT: true
               # FTB_LEGACYJAVAFIXER: false
               # WHITELIST: ""
               # OPS: ""
