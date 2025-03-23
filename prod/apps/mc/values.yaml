@@ -352,7 +352,7 @@ minecraft:
       # Can be set to either WORLD_FILE or OVERRIDES to specify where to get LEVEL
       setLevelFrom: ""
       # Sets limit to how many mods can be downloaded in parallel
-      parallelDownloads: 4
+      parallelDownloads: 8
       # Set to skip files in modpack "overrides" folder that would replace existing files
       # NOTE: World data is always skipped if present
       overridesSkipExisting: false
@@ -452,7 +452,7 @@ minecraft:
     # storageClass: "-"
     dataDir:
       # Set this to false if you don't care to persist state between restarts.
-      enabled: false
+      enabled: true
       Size: 1Gi
       accessModes:
         - ReadWriteOnce
