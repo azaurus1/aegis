@@ -1,7 +1,7 @@
 apiVersion: v2
-name: mc
-version: 0.0.0
+name: minecraft-java
+version: 1.0.0
 dependencies:
-  - name: minecraft
-    version: 4.26.0
-    repository: https://itzg.github.io/minecraft-server-charts/
+  - name: minecraft-java
+    version: 9.0.12
+    repository: oci://tccr.io/truecharts
