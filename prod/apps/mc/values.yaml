@@ -340,13 +340,15 @@ minecraft:
       # Less restrictive way of specifying modpack version, uses substring match
       filenameMatcher: ""
       # List of project slugs or IDs to be excluded from modpack, useful if mod is incorrectly marked as server side
-      excludeMods: []
+      excludeMods: 
+      - "lighty"
+      - "986380"
       # List of project slugs or IDs to be included in modpack, useful if mod is incorrectly marked as client side only
       includeMods: []
       # Path to file with rules for including and excluding mods. If null - use bundled file, if empty - disable it
       excludeIncludeFile: null
       # Reevaluate exclude and include rules
-      forceSynchronize: false
+      forceSynchronize: true
       # Can be set to either WORLD_FILE or OVERRIDES to specify where to get LEVEL
       setLevelFrom: ""
       # Sets limit to how many mods can be downloaded in parallel
