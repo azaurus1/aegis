@@ -1,5 +1,0 @@
-minio:
-  persistence:
-    enabled: true
-    storageClass: "nfs"
-    size: 150Gi
