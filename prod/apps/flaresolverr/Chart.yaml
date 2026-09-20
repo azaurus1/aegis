@@ -1,0 +1,7 @@
+apiVersion: v2
+name: flaresolverr
+version: 1.0.0
+dependencies:
+  - name: flaresolverr
+    version: 2.4.1
+    repository: oci://ghcr.io/m0nsterrr/helm-charts/flaresolverr
